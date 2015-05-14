@@ -66,7 +66,7 @@ class AbstractAppender;
  * \sa Logger::LogLevel
  * \sa Logger::write()
  */
-#define LOG_INFO(...)    Logger::write(Logger::Info, __FILE__, __LINE__, Q_FUNC_INFO, ##__VA_ARGS__)
+#define LOG_INFO(message)    Logger::write(Logger::Info, __FILE__, __LINE__, Q_FUNC_INFO, message)
 
 //! Write the warning log record
 /**
@@ -77,7 +77,7 @@ class AbstractAppender;
  * \sa Logger::LogLevel
  * \sa Logger::write()
  */
-#define LOG_WARNING(...) Logger::write(Logger::Warning, __FILE__, __LINE__, Q_FUNC_INFO, ##__VA_ARGS__)
+#define LOG_WARNING(message) Logger::write(Logger::Warning, __FILE__, __LINE__, Q_FUNC_INFO, message)
 
 //! Write the error log record
 /**
@@ -88,7 +88,7 @@ class AbstractAppender;
  * \sa Logger::LogLevel
  * \sa Logger::write()
  */
-#define LOG_ERROR(...)   Logger::write(Logger::Error, __FILE__, __LINE__, Q_FUNC_INFO, ##__VA_ARGS__)
+#define LOG_ERROR(message)   Logger::write(Logger::Error, __FILE__, __LINE__, Q_FUNC_INFO, message)
 
 //! Write the fatal log record
 /**
